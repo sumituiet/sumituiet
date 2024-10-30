@@ -30,27 +30,31 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Background>
-    <div className="container my-5" style={{
-      textAlign: "left",
-      color: "white",
-    }}>
-      <h1 className="mb-4">My Projects</h1>
-        {projects.map((project, index) => (
-          <div className="col-md mb-4" key={index}>
-            <div className="card h-100 shadow-sm" onClick={() => window.open(project.link, '_blank')}>
-              <div className="card-body">
-                <h5 className="card-title">{project.title}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{project.duration}</h6>
-                <p className="card-text">{project.description}</p>
-                <p className="card-text"><strong>Tech Stack:</strong> {project.techStack}</p>
-                <p className="card-text">{project.content}</p>
-              </div>
+<Background>
+  <div className="container my-5 full-page-component">
+    <h1 className="mb-4">My Projects</h1>
+    <div className="row">
+      {projects.map((project, index) => (
+        <div className="col-md-12 mb-4" key={index}>
+          <div className="card h-100 shadow-sm">
+            <div className="card-body">
+              <h5 className="card-title">{project.title}</h5>
+              <h6 className="card-subtitle mb-2">{project.duration}</h6>
+              <p className="card-text">{project.description}</p>
+              {project.techStack && (
+                <p className="card-text">
+                  <strong>Tech Stack:</strong> {project.techStack}
+                </p>
+              )}
+              <p className="card-text">{project.content}</p>
             </div>
           </div>
-        ))}
-      </div>
-      </Background>
+        </div>
+      ))}
+    </div>
+  </div>
+</Background>
+
   );
 };
 

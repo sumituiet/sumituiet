@@ -31,35 +31,30 @@ const experience = [
 
 const Experience = () => {
   return (
-    <Background>
-    <div className="container my-5" style={{
-      textAlign: "left",
-      color: "white",
-    }}>
-      <h1 className="mb-4">My Experience</h1>
-        {experience.map((experience, index) => (
-          <div className="col-md mb-4" key={index}>
-            <div className="card h-100 shadow-sm">
-              <div className="card-body">
-                <h5 className="card-title">{experience.title}</h5>
-                <h6 className="card-subtitle mb-2 text-muted">{experience.duration}</h6>
-                <p className="card-text">{experience.description}</p>
-                {experience.techStack && (
-                  <p className="card-text">
-                    <strong>Tech Stack:</strong> {experience.techStack}
-                  </p>
-                )}
-                <p className="card-text">{experience.content}</p>
-              </div>
-              {/* Uncomment and replace '#' with your experience link if available */}
-              {/* <div className="card-footer">
-                <a href="#" className="btn btn-primary">View experience</a>
-              </div> */}
+<Background>
+  <div className="container my-5 full-page-component">
+    <h1 className="mb-4">My Experience</h1>
+    <div className="row">
+      {experience.map((experience, index) => (
+        <div className="col-md-12 mb-4" key={index}>
+          <div className="card h-100 shadow-sm">
+            <div className="card-body">
+              <h5 className="card-title">{experience.title}</h5>
+              <h6 className="card-subtitle mb-2">{experience.duration}</h6>
+              <p className="card-text">{experience.description}</p>
+              {experience.techStack && (
+                <p className="card-text">
+                  <strong>Tech Stack:</strong> {experience.techStack}
+                </p>
+              )}
+              <p className="card-text">{experience.content}</p>
             </div>
           </div>
-        ))}
-      </div>
-      </Background>
+        </div>
+      ))}
+    </div>
+  </div>
+</Background>
   );
 };
 

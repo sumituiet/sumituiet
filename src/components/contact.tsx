@@ -4,7 +4,7 @@ import Background from "./background";
 export default function Contact() {
     return (
         <Background>
-        <Container style={
+        <Container className="full-page-component" style={
             {
                 color: 'white',
                 textAlign: 'center',

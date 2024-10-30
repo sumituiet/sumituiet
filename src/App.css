@@ -19,3 +19,34 @@ div{
   color: white;
   text-align: left;
 }
+
+.full-page-component {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Card styling */
+.card {
+  width: 100%;
+  background-color: transparent; /* Makes the card background transparent */
+  color: #fff;
+  border-bottom: #fff 1px solid;
+  border-top: #fff 1px solid;
+
+}
+
+/* For Webkit Browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* For All Browsers */
+html {
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+}

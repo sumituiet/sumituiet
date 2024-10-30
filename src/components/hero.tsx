@@ -4,10 +4,12 @@ import Background from "./background"
 export default function Hero() {
   return(
     <Background>
-<Container className="d-flex justify-content-center align-items-center h-100">
-<div className="text-white">
+<Container className="d-flex justify-content-center align-items-center " >
+<div className="text-white full-page-component" >
   <h1 className="mb-3">Sumit</h1>
-  <h4 className="mb-3">
+  <h4 className="mb-3" style={{
+    textAlign: 'justify',
+  }}>
     Final-year Data Science student with 3 years of experience in data processing, engineering, and analytics. 
     Expertise in developing data-driven applications focused on AI and machine learning. 
     Improved system performance by 15% through innovative solutions in IoT and energy usage forecasting. 
