@@ -3,14 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://sumituiet.github.io/portfolio",
+  "homepage": "https://sumituiet.github.io/sumituiet",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
