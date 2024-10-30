@@ -1,3 +1,5 @@
+import Background from "./background";
+
 const projects = [
     {
         title: 'Smart Query System to Access Image Data Using LLMs',
@@ -28,7 +30,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="container my-5">
+    <Background>
+    <div className="container my-5" style={{
+      textAlign: "left",
+      color: "white",
+    }}>
       <h1 className="mb-4">My Projects</h1>
         {projects.map((project, index) => (
           <div className="col-md mb-4" key={index}>
@@ -44,6 +50,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      </Background>
   );
 };
 

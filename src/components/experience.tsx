@@ -1,3 +1,5 @@
+import Background from "./background";
+
 const experience = [
   {
     title: 'Assistant Software Engineer at Tata Consultancy Services',
@@ -29,7 +31,11 @@ const experience = [
 
 const Experience = () => {
   return (
-    <div className="container my-5">
+    <Background>
+    <div className="container my-5" style={{
+      textAlign: "left",
+      color: "white",
+    }}>
       <h1 className="mb-4">My Experience</h1>
         {experience.map((experience, index) => (
           <div className="col-md mb-4" key={index}>
@@ -53,6 +59,7 @@ const Experience = () => {
           </div>
         ))}
       </div>
+      </Background>
   );
 };
 

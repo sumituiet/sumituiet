@@ -6,9 +6,6 @@ export default function Motion({ children }: { children: ReactNode }) {
     return (
         <motion.div
         whileHover={{ scale: 1.1,
-
-            color: 'white',
-            backgroundColor: 'black',
          }}
         style={{
             
