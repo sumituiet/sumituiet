@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '22'  # You can specify the Node.js version you are using
+        node-version: '16'  # You can specify the Node.js version you are using
 
     - name: Install dependencies
       run: npm install
@@ -24,8 +24,22 @@ jobs:
     - name: Build the React app
       run: npm run build
 
+    - name: Verify build directory
+      run: |
+        if [ ! -d "./build" ]; then
+          echo "Build directory not found!"
+          exit 1
+        fi
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+        publish_branch: gh-pages
+        allow_empty_commit: false
+        keep_files: false
+        force_orphan: true  # Ensure the branch is created from scratch
+        enable_jekyll: false
+        disable_nojekyll: false
+        exclude_assets: .github
