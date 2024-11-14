@@ -25,5 +25,5 @@ Final-year Master of Data Science student with over 3 years of experience in dat
 
 <div>
   <img width="45%" align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=sumituiet&show_icons=true&locale=en&layout=compact" alt="sumituiet" />
-  <img width="50%"  src="https://github-readme-streak-stats.herokuapp.com/?user=sumituiet&" alt="sumituiet" />
+  <img width="50%"  src="https://github-readme-streak-stats.herokuapp.com/?user=sumituiet" alt="sumituiet" />
 </div>
